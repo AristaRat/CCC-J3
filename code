@@ -1,0 +1,33 @@
+N = int(input())
+AttendL = []
+HighestL = []
+Day1 = 0
+Day2 = 0
+Day3 = 0
+Day4 = 0
+Day5 = 0
+
+for i in range(N):
+  Attend = input()
+  AttendL.append(Attend)
+  for i in range(5):
+    if Attend[i] == "Y":
+      if i == 0:
+         Day1 += 1
+      if i == 1:
+         Day2 += 1
+      if i == 2:
+         Day3 += 1
+      if i == 3:
+         Day4 += 1
+      if i == 4:
+         Day5 += 1
+
+Days = [Day1, Day2, Day3, Day4, Day5]
+Highest = max(Days)
+
+for i in range(len(Days)):
+  if Days[i] == Highest:
+    HighestL.append(i + 1)
+
+print(HighestL)
